@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Physics Lab Assistant · Ohm's Law</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="hero">
+  <div class="topline"><span class="mark">Φ</span><span>VIRTUAL LAB / CLASS XII</span><span class="status">● READY TO EXPERIMENT</span></div>
+  <div class="hero-copy">
+    <p class="eyebrow">EXPERIMENT 01 — ELECTRICITY</p>
+    <h1>Physics Lab<br><em>Assistant.</em></h1>
+    <p class="intro">Understand the setup. Take readings. Check your observations. Prepare for viva.</p>
+    <a class="primary-link" href="#experiment">Explore experiment <span>↘</span></a>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    <div class="atom"><span></span><b>Ω</b></div>
+    <div class="art-label">V = I R<br><small>OHM'S LAW</small></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Experiment sections">
+  <a class="active" href="#theory">01 / Theory</a><a href="#circuit">02 / Circuit</a>
+  <a href="#record">03 / Readings</a><a href="#viva">04 / Viva</a>
+</nav>
+
+<main id="experiment">
+<section id="theory" class="section-block">
+  <div class="section-head"><div><p class="eyebrow">01 — GET THE BASICS</p><h2>Experiment brief</h2></div><span class="index">A / THEORY</span></div>
+  <div class="two-col">
+    <article class="paper">
+      <h3>Aim</h3><p>To determine the resistance per unit length of a given wire by plotting a graph of potential difference versus current.</p>
+      <h3>Apparatus</h3><p>Wire of unknown resistance (about 10 Ω), battery eliminator or accumulator (0–3 V), voltmeter (0–5 V), milliammeter (0–500 mA), rheostat, plug key, connecting wires and sand paper.</p>
+      <h3>Principle</h3><p>At constant physical state, the current through a conductor is directly proportional to the potential difference across it.</p>
+      <div class="formula">V = IR <span>R = ρl / A</span></div>
+      <p class="muted">For an I–V graph, slope = 1/R. Therefore R = 1/slope, and resistance per unit length = R/l.</p>
+    </article>
+    <article class="paper procedure">
+      <h3>Procedure</h3>
+      <ol>
+        <li>Clean the ends of connecting wires with sand paper.</li>
+        <li>Connect battery, key, rheostat and milliammeter in series; connect voltmeter in parallel across the test wire.</li>
+        <li>Check that both meter pointers are at zero and correct zero error if needed.</li>
+        <li>Note the range and least count of each meter.</li>
+        <li>Insert the key and set the rheostat for minimum current.</li>
+        <li>Note milliammeter and voltmeter readings.</li>
+        <li>Remove the key, let the wire cool, adjust the rheostat and take another reading.</li>
+        <li>Repeat until six readings have been recorded.</li>
+      </ol>
+      <h3>Precautions</h3>
+      <ul><li>Ammeter in series; voltmeter in parallel.</li><li>Keep the key inserted only while taking a reading.</li><li>Remove meter zero error before starting.</li></ul>
+    </article>
+  </div>
+</section>
+
+<section id="circuit" class="section-block">
+  <div class="section-head"><div><p class="eyebrow">02 — UNDERSTAND THE SETUP</p><h2>Interactive circuit</h2></div><span class="index">B / CIRCUIT</span></div>
+  <p class="muted">Select any component in the diagram to learn its function and connection.</p>
+  <div class="circuit-layout">
+    <div class="circuit-card">
+      <svg viewBox="0 0 720 390" role="img" aria-label="Ohm's law circuit: battery and open plug key and rheostat and milliammeter in series with the resistance wire; voltmeter in parallel across the wire">
+        <g class="wires">
+          <!-- Main series loop: gaps are left for each conventional component symbol. -->
+          <path d="M85 85 H123 M143 85 H158 M178 85 H245 M290 85 H385 M505 85 H635 V285 H530 M400 285 H85 V214 M85 156 V85"/>
+          <!-- Parallel voltmeter branch, connected across the two ends of the resistance wire. -->
+          <path d="M385 285 H400 M530 285 H545 M385 285 V350 H440 M490 350 H545 V285"/>
+          <circle cx="385" cy="285" r="4" fill="#315d56"/>
+          <circle cx="545" cy="285" r="4" fill="#315d56"/>
+        </g>
+        <g class="component" data-part="battery" tabindex="0">
+          <rect x="108" y="48" width="82" height="72" rx="7" style="fill:transparent;stroke:none"/>
+          <!-- Battery: alternating long (+) and short (−) cell plates. -->
+          <path d="M123 60 V110 M143 72 V98 M158 60 V110 M178 72 V98" class="symbol"/>
+          <text x="150" y="135" text-anchor="middle">Battery</text>
+        </g>
+        <g class="component" data-part="key" tabindex="0">
+          <rect x="230" y="48" width="75" height="70" rx="7" style="fill:transparent;stroke:none"/>
+          <!-- Open plug key: the arm does not touch the right-hand contact. -->
+          <circle cx="245" cy="85" r="5"/><circle cx="290" cy="85" r="5"/>
+          <path d="M245 85 L281 61" class="symbol"/>
+          <text x="267" y="130" text-anchor="middle">Plug key</text>
+        </g>
+        <g class="component" data-part="rheostat" tabindex="0">
+          <!-- IEC variable resistor symbol: rectangle with diagonal arrow. -->
+          <rect x="385" y="72" width="120" height="26" rx="1"/>
+          <path d="M481 51 L450 82 M450 82 L454 69 M450 82 L463 78" class="symbol"/>
+          <text x="445" y="130" text-anchor="middle">Rheostat</text>
+        </g>
+        <g class="component" data-part="ammeter" tabindex="0">
+          <!-- Milliammeter: circle containing mA, in series. -->
+          <circle cx="85" cy="185" r="29"/>
+          <text x="85" y="192" class="meter" text-anchor="middle">mA</text>
+          <text x="129" y="190">Milliammeter (series)</text>
+        </g>
+        <g class="component" data-part="wire" tabindex="0">
+          <!-- The measured wire is shown as a fixed resistor, marked R. -->
+          <rect x="400" y="273" width="130" height="24" rx="1"/>
+          <text x="465" y="290" text-anchor="middle">R</text>
+          <text x="465" y="323" text-anchor="middle">Resistance wire</text>
+        </g>
+        <g class="component" data-part="voltmeter" tabindex="0">
+          <!-- Voltmeter: circle containing V, across the test wire. -->
+          <circle cx="465" cy="350" r="25"/>
+          <text x="465" y="357" class="meter" text-anchor="middle">V</text>
+          <text x="557" y="355">Voltmeter (parallel)</text>
+        </g>
+        <g class="polarity"><text x="123" y="46" text-anchor="middle">+</text><text x="178" y="46" text-anchor="middle">-</text></g>
+      </svg>
+    </div>
+    <aside class="component-info"><p class="eyebrow">COMPONENT NOTES</p><h3 id="part-title">Choose a component</h3><p id="part-description">Click a component in the circuit to see what it does and why it is connected that way.</p><div class="note-tag" id="part-tag">INTERACTIVE DIAGRAM</div></aside>
+  </div>
+  <div class="callout"><strong>Connection rule:</strong> Ammeter → series. Voltmeter → parallel across the resistance wire.</div>
+</section>
+
+<section id="record" class="section-block">
+  <div class="section-head"><div><p class="eyebrow">03 — YOUR OBSERVATIONS</p><h2>Reading analyser</h2></div><span class="index">C / DATA</span></div>
+  <p class="muted">Enter your actual laboratory readings. The analyser checks units, meter ranges and consistency between V/I values.</p>
+  <div class="settings">
+    <label>Voltmeter least count (V)<input id="lc-v" type="number" value="0.1" min="0.001" step="any"></label>
+    <label>Milliammeter least count (mA)<input id="lc-i" type="number" value="5" min="0.001" step="any"></label>
+    <label>Wire length (m)<input id="length" type="number" value="0.50" min="0.001" step="any"></label>
+  </div>
+  <div class="table-wrap"><table><thead><tr><th>No.</th><th>Potential difference V (V)</th><th>Current I (mA)</th><th>Resistance V/I (Ω)</th><th>Reading check</th></tr></thead><tbody id="reading-body"></tbody></table></div>
+  <div class="actions"><button class="button" id="analyse">Analyse readings ↗</button><button class="button secondary" id="sample">Load example data</button><button class="text-button" id="clear">Clear table</button></div>
+  <div id="analysis-result" class="result-box" aria-live="polite">Your calculated resistance and graph will appear here after analysis.</div>
+  <div class="graph-card"><div class="graph-heading"><div><p class="eyebrow">PLOT</p><h3>Current vs potential difference</h3></div><span class="graph-key"><i></i> Readings</span></div><canvas id="plot" width="900" height="420"></canvas><p class="tiny muted">The fitted line uses readings that pass the consistency check. Red crosses indicate flagged readings.</p></div>
+</section>
+
+<section id="viva" class="section-block">
+  <div class="section-head"><div><p class="eyebrow">04 — TEST YOURSELF</p><h2>Viva practice</h2></div><span class="index">D / QUIZ</span></div>
+  <div class="quiz-top"><p class="muted">10 multiple-choice questions · One answer per question · Explanations after submission</p><span id="quiz-progress">0 / 10 answered</span></div>
+  <form id="quiz-form">
+    {% for q in viva %}
+    <fieldset class="question"><legend><span>Q{{ loop.index }}</span>{{ q.q }}</legend>
+      {% for opt in q.opts %}
+      <label class="option"><input type="radio" name="q{{ loop.index0 }}" value="{{ loop.index0 }}"><span>{{ opt }}</span></label>
+      {% endfor %}
+      <div class="explanation" id="explain-{{ loop.index0 }}"></div>
+    </fieldset>
+    {% endfor %}
+    <div class="actions"><button class="button" type="submit">Submit viva test ↗</button><button class="button secondary" type="button" id="retry">Try again</button></div>
+  </form>
+  <div id="quiz-result" class="result-box" aria-live="polite">Complete the questions and submit to see your score.</div>
+</section>
+</main>
+<footer><span>PHYSICS LAB ASSISTANT</span><span>LEARN · MEASURE · UNDERSTAND</span></footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
